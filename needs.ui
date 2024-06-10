@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Needs</class>
+ <widget class="QWidget" name="Needs">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget{
+	background-color: #666699;
+}</string>
+  </property>
+  <widget class="QTextEdit" name="textEdit">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>431</width>
+     <height>381</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Anonymous Pro</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QTextEdit{
+	border: 2px solid #000033;
+	color:	black;
+	border-radius: 7px;
+	background-color: #edf5ef;
+}</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="widget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>10</y>
+     <width>141</width>
+     <height>381</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QWidget{
+	border: none;
+	background-color: #333333;
+	border-radius: 4px;
+}</string>
+   </property>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>5</x>
+      <y>12</y>
+      <width>130</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Anonymous Pro</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	color: white;
+	border: none;
+	background-color: #000033;
+	border-radius: 7px;
+}
+
+
+QPushButton:hover{
+	background-color: rgb(92, 100, 150);
+}
+
+QPushButton:pressed{
+	background-color:rgb(0, 0, 30);
+	border: 3px inset
+}</string>
+    </property>
+    <property name="text">
+     <string>Добавить
+заметку</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>5</x>
+      <y>310</y>
+      <width>130</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Anonymous Pro</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	color: #F55C5E;
+	border: none;
+	background-color: #000033;
+	border-radius: 7px;
+}
+
+
+QPushButton:hover{
+	background-color: rgb(92, 100, 150);
+}
+
+QPushButton:pressed{
+	background-color:rgb(0, 0, 30);
+	border: 3px inset
+}</string>
+    </property>
+    <property name="text">
+     <string>Очистить</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
