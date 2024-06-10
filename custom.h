@@ -1,6 +1,7 @@
 #ifndef CUSTOM_H
 #define CUSTOM_H
 
+#include <iostream>
 #include <QWidget>
 
 namespace Ui {

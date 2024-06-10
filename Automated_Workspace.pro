@@ -18,6 +18,7 @@ SOURCES += \
     tips.cpp
 
 HEADERS += \
+    CSVRow.h \
     calculate.h \
     custom.h \
     init.h \

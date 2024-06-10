@@ -30,7 +30,7 @@
 	background-color: #666699;
 }</string>
   </property>
-  <widget class="QWidget" name="widget" native="true">
+  <widget class="QWidget" name="ParentWidget" native="true">
    <property name="geometry">
     <rect>
      <x>10</x>

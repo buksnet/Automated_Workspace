@@ -7,4 +7,12 @@
         <file>images/img5.png</file>
         <file>images/img6.png</file>
     </qresource>
+    <qresource prefix="/foodbase">
+        <file>menu/custom.csv</file>
+        <file>menu/seconds.csv</file>
+        <file>menu/soups.csv</file>
+        <file>menu/sweets.csv</file>
+        <file>menu/topdishes.csv</file>
+        <file>menu/traditional.csv</file>
+    </qresource>
 </RCC>

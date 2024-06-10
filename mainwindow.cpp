@@ -72,6 +72,14 @@ void MainWindow::updateTotal(){
     ui->totalValue->setText(QString::number(currTransaction.getSum(), 'f', 2));
 }
 
+void MainWindow::PushToTable(int index, std::string name, double quantity, double price){
+    ui->tableWidget->insertRow(ui->tableWidget->rowCount());
+    ui->tableWidget->setItem(ui->tableWidget->rowCount()-1, 0, new QTableWidgetItem(index));
+    ui->tableWidget->setItem(ui->tableWidget->rowCount()-1, 1, new QTableWidgetItem(name.c_str()));
+    ui->tableWidget->setItem(ui->tableWidget->rowCount()-1, 2, new QTableWidgetItem(quantity));
+    ui->tableWidget->setItem(ui->tableWidget->rowCount()-1, 3, new QTableWidgetItem(price));
+}
+
 void MainWindow::PaymentMethodSwap(){
     std::string text1 = "Оплата:\nналичными", text2 = "Оплата:\nкартой";
     if (ui->payOptionMethod->text() == text1.c_str()) ui->payOptionMethod->setText(text2.c_str());
@@ -83,4 +91,3 @@ void MainWindow::PaymentTimeSwap(){
     if (ui->payOptionTime->text() == text1.c_str()) ui->payOptionTime->setText(text2.c_str());
     else ui->payOptionTime->setText(text1.c_str());
 }
-

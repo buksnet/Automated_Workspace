@@ -2,6 +2,8 @@
 #define POSITIONPICK_H
 
 #include <QWidget>
+#include <fstream>
+#include "init.h"
 
 namespace Ui {
 class PositionPick;
@@ -10,7 +12,6 @@ class PositionPick;
 class PositionPick : public QWidget
 {
     Q_OBJECT
-
 public:
     explicit PositionPick(QWidget *parent = nullptr);
     ~PositionPick();
@@ -20,5 +21,6 @@ private:
     Ui::PositionPick *ui;
     std::string category;
 };
+
 
 #endif // POSITIONPICK_H
