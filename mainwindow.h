@@ -16,7 +16,7 @@ public:
     ~MainWindow();
     void PaymentMethodSwap();
     void PaymentTimeSwap();
-
+    void updateTotal();
 private:
     Ui::MainWindow *ui;
 };

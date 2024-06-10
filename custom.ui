@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Needs</class>
- <widget class="QWidget" name="Needs">
+ <class>Custom</class>
+ <widget class="QWidget" name="Custom">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>Custom</string>
   </property>
   <property name="styleSheet">
    <string notr="true">QWidget{
@@ -49,7 +49,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
    <property name="placeholderText">
-    <string>Введите пожелания к заказу</string>
+    <string>Введите свой рецепт</string>
    </property>
   </widget>
   <widget class="QWidget" name="widget" native="true">
@@ -102,8 +102,7 @@ QPushButton:pressed{
 }</string>
     </property>
     <property name="text">
-     <string>Добавить
-заметку</string>
+     <string>Отправить</string>
     </property>
    </widget>
    <widget class="QPushButton" name="clear">

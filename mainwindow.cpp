@@ -2,17 +2,47 @@
 #include "ui_mainwindow.h"
 #include "tips.h"
 #include "needs.h"
+#include "positionpick.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+    updateTotal();
+
     int wdt[4] {25, 135, 65, 50};
     auto table = ui->tableWidget;
     for (int i =0; i<4; i++){
         table->setColumnWidth(i, wdt[i]);
     }
+
+    connect(ui->soupButton,
+            &QPushButton::clicked,
+            this,
+            [=](){PositionPick *w = new PositionPick; w->setWindowTitle(w->windowTitle()+" - Супы"); w->setCategory(0); w->show();});
+    connect(ui->secondButton,
+            &QPushButton::clicked,
+            this,
+            [=](){PositionPick *w = new PositionPick; w->setWindowTitle(w->windowTitle()+" - Вторые блюда"); w->setCategory(1); w->show();});
+    connect(ui->traditionalButton,
+            &QPushButton::clicked,
+            this,
+            [=](){PositionPick *w = new PositionPick; w->setWindowTitle(w->windowTitle()+" - Традиционные блюда"); w->setCategory(2); w->show();});
+    connect(ui->topDishesButton,
+            &QPushButton::clicked,
+            this,
+            [=](){PositionPick *w = new PositionPick; w->setWindowTitle(w->windowTitle()+" - Блюда месяца"); w->setCategory(3); w->show();});
+    connect(ui->customButton,
+            &QPushButton::clicked,
+            this,
+            [=](){PositionPick *w = new PositionPick; w->setWindowTitle(w->windowTitle()+" - Свой рецепт"); w->setCategory(4); w->show();});
+    connect(ui->sweetButton,
+            &QPushButton::clicked,
+            this,
+            [=](){PositionPick *w = new PositionPick; w->setWindowTitle(w->windowTitle()+" - Десерты"); w->setCategory(5); w->show();});
+
 
     connect(ui->tipsButton,
             &QPushButton::clicked,
@@ -32,9 +62,14 @@ MainWindow::MainWindow(QWidget *parent)
             [=](){Needs *need = new Needs; need->show();});
 }
 
+
 MainWindow::~MainWindow()
 {
     delete ui;
+}
+
+void MainWindow::updateTotal(){
+    ui->totalValue->setText(QString::number(currTransaction.getSum(), 'f', 2));
 }
 
 void MainWindow::PaymentMethodSwap(){

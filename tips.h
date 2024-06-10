@@ -2,6 +2,7 @@
 #define TIPS_H
 
 #include <QWidget>
+#include "init.h"
 
 namespace Ui {
 class Tips;
@@ -14,6 +15,7 @@ class Tips : public QWidget
 public:
     explicit Tips(QWidget *parent = nullptr);
     ~Tips();
+    void addTips(bool);
 
 private:
     Ui::Tips *ui;

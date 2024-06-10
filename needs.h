@@ -1,6 +1,7 @@
 #ifndef NEEDS_H
 #define NEEDS_H
 
+#include "init.h"
 #include <QWidget>
 
 namespace Ui {

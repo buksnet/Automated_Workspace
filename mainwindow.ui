@@ -156,7 +156,7 @@ QHeaderView::section{
       <number>0</number>
      </attribute>
      <attribute name="horizontalHeaderDefaultSectionSize">
-      <number>30</number>
+      <number>70</number>
      </attribute>
      <attribute name="horizontalHeaderHighlightSections">
       <bool>true</bool>
@@ -639,7 +639,7 @@ QPushButton:pressed{
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
-    <widget class="QPushButton" name="pushButton">
+    <widget class="QPushButton" name="soupButton">
      <property name="geometry">
       <rect>
        <x>5</x>
@@ -665,7 +665,7 @@ QPushButton:pressed{
     background-position: center bottom;
     background-repeat: no-repeat;
     background-origin: content;
-    background-image: url(&quot;P:/code/AWS/images/img3.png&quot;);
+    background-image: url(&quot;:/qresource/images/img3.png&quot;);
  }</string>
      </property>
      <property name="text">
@@ -682,7 +682,7 @@ QPushButton:pressed{
       </size>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_2">
+    <widget class="QPushButton" name="secondButton">
      <property name="geometry">
       <rect>
        <x>205</x>
@@ -711,7 +711,7 @@ QPushButton:pressed{
     background-position: center bottom;
     background-repeat: no-repeat;
     background-origin: content;
-    background-image: url(&quot;P:/code/AWS/images/img2.png&quot;);
+    background-image: url(&quot;:/qresource/images/img2.png&quot;);
  }</string>
      </property>
      <property name="text">
@@ -729,7 +729,7 @@ QPushButton:pressed{
       </size>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_3">
+    <widget class="QPushButton" name="traditionalButton">
      <property name="geometry">
       <rect>
        <x>5</x>
@@ -755,7 +755,7 @@ QPushButton:pressed{
     background-position: center bottom;
     background-repeat: no-repeat;
     background-origin: content;
-    background-image: url(&quot;P:/code/AWS/images/img5.png&quot;);
+    background-image: url(&quot;:/qresource/images/img5.png&quot;);
  }</string>
      </property>
      <property name="text">
@@ -772,7 +772,7 @@ QPushButton:pressed{
       </size>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_4">
+    <widget class="QPushButton" name="topDishesButton">
      <property name="geometry">
       <rect>
        <x>205</x>
@@ -798,7 +798,7 @@ QPushButton:pressed{
     background-position: center bottom;
     background-repeat: no-repeat;
     background-origin: content;
-    background-image: url(&quot;P:/code/AWS/images/img4.png&quot;);
+    background-image: url(&quot;:/qresource/images/img4.png&quot;);
  }</string>
      </property>
      <property name="text">
@@ -816,7 +816,7 @@ QPushButton:pressed{
       </size>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_5">
+    <widget class="QPushButton" name="customButton">
      <property name="geometry">
       <rect>
        <x>5</x>
@@ -842,7 +842,7 @@ QPushButton:pressed{
     background-position: center bottom;
     background-repeat: no-repeat;
     background-origin: content;
-    background-image: url(&quot;P:/code/AWS/images/img1.png&quot;);
+    background-image: url(&quot;:/qresource/images/img1.png&quot;);
  }</string>
      </property>
      <property name="text">
@@ -860,7 +860,7 @@ QPushButton:pressed{
       </size>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_6">
+    <widget class="QPushButton" name="sweetButton">
      <property name="geometry">
       <rect>
        <x>205</x>
@@ -886,7 +886,7 @@ QPushButton:pressed{
     background-position: center bottom;
     background-repeat: no-repeat;
     background-origin: content;
-    background-image: url(&quot;P:/code/AWS/images/img6.png&quot;);
+    background-image: url(&quot;:/qresource/images/img6.png&quot;);
  }</string>
      </property>
      <property name="text">
@@ -926,7 +926,7 @@ QPushButton:pressed{
      <enum>QFrame::Raised</enum>
     </property>
    </widget>
-   <widget class="QLabel" name="label">
+   <widget class="QLabel" name="TotalLabel">
     <property name="geometry">
      <rect>
       <x>22</x>
@@ -951,7 +951,7 @@ QPushButton:pressed{
      <string>Итог:</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_2">
+   <widget class="QLabel" name="totalValue">
     <property name="geometry">
      <rect>
       <x>120</x>
@@ -974,19 +974,6 @@ QPushButton:pressed{
     </property>
     <property name="text">
      <string>0000000.00</string>
-    </property>
-   </widget>
-   <widget class="QScrollBar" name="verticalScrollBar">
-    <property name="geometry">
-     <rect>
-      <x>795</x>
-      <y>20</y>
-      <width>15</width>
-      <height>561</height>
-     </rect>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Vertical</enum>
     </property>
    </widget>
   </widget>

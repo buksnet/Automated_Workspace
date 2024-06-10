@@ -10,23 +10,33 @@ CONFIG += c++11
 
 SOURCES += \
     calculate.cpp \
+    custom.cpp \
     main.cpp \
     mainwindow.cpp \
     needs.cpp \
+    positionpick.cpp \
     tips.cpp
 
 HEADERS += \
     calculate.h \
+    custom.h \
+    init.h \
     mainwindow.h \
     needs.h \
+    positionpick.h \
     tips.h
 
 FORMS += \
+    custom.ui \
     mainwindow.ui \
     needs.ui \
+    positionpick.ui \
     tips.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    resources.qrc
