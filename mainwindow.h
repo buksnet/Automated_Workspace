@@ -1,6 +1,8 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 #include <QMainWindow>
+#include "init.h"
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -15,10 +17,13 @@ public:
     void PaymentMethodSwap();
     void PaymentTimeSwap();
     void updateTotal();
-    void PushToTable(int index, std::string name, double quantity, double price);
+    void PushToTable(QString name, double quantity, double price);
 private:
     Ui::MainWindow *ui;
+
+public slots:
+    void addToTransaction(QString name, double quantity, double price);
+    void tipsUpdate();
 };
 
 #endif // MAINWINDOW_H
-

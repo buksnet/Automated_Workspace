@@ -1,13 +1,13 @@
 #include "positionpick.h"
 #include "ui_positionpick.h"
 #include "CSVRow.h"
+#include "mainwindow.h"
 
 PositionPick::PositionPick(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::PositionPick)
 {
     ui->setupUi(this);
-    addPositions();
 
     connect(ui->resetButton,
             &QPushButton::clicked,
@@ -34,20 +34,20 @@ void PositionPick::setCategory(int cat){
     case 5: category = "sweets"; break;
     default: break;
     }
+    addPositions();
 }
 
 void PositionPick::addPositions(){
-    std::ifstream file(":/foodbase/menu/"+ category + ".csv");
-    std::vector<std::vector<std::string>> data = readCSV(file);
+    QString name = name.fromStdString(":/foodbase/menu/"+ category + ".csv");
+    std::vector<std::vector<std::string>> data = readCSV(name);
+
     int index = 0;
-    std::string btnName;
     std::vector<int> {};
     for(unsigned long long int i = 1; i < data.size(); i++){
         QPushButton *newbutton = new QPushButton;
         newbutton->resize(190, 190);
-        newbutton->setText(data[i][0].c_str());
-        btnName = ("Button" + std::to_string(index));
-        newbutton->setObjectName(btnName.c_str());
+        newbutton->setText((data[i][0] + '\n' + data[i][1]).c_str());
+        newbutton->setObjectName(QString("Button%1").arg(index));
         newbutton->setStyleSheet("QPushButton{\
                                  color: white;\
                                  background-color: #000033;\
@@ -62,11 +62,14 @@ void PositionPick::addPositions(){
                                  border: 3px inset\
                              }");
         newbutton->setParent(ui->ParentWidget);
-        newbutton->move(5 + i*192, 5+abs(index/3)*192);
-        connect(ui->ParentWidget->findChild<QPushButton *>(btnName.c_str()),
+        newbutton->move(5 + (i-1)%3*192, 5+abs(index/3)*192);
+
+        double unitPrice = std::stod(data[i][1]);
+        connect(newbutton,
                 &QPushButton::clicked,
                 this,
-                [=](){currTransaction.addPosition(std::stod(data[i][1]), ui->quantity->text().toDouble()); });
+                [=](){double quantity = ui->quantity->text().toDouble();
+                emit addToTransaction(QString::fromStdString(data[i][0]), quantity, quantity*unitPrice); });
         index++;
-}
+    }
 }

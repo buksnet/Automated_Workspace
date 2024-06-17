@@ -5,6 +5,7 @@
 #include <fstream>
 #include "init.h"
 
+
 namespace Ui {
 class PositionPick;
 }
@@ -20,6 +21,9 @@ public:
 private:
     Ui::PositionPick *ui;
     std::string category;
+signals:
+    void addToTransaction(QString name, double quantity, double price);
+
 };
 
 

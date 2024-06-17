@@ -3,7 +3,7 @@
 Calculate::Calculate()
 {
     sum = 0.f;
-    tipPercent = 0;
+    tipPercent = 0.f;
     tipValue = 0.f;
 }
 

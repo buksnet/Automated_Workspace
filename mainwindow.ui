@@ -179,11 +179,6 @@ QHeaderView::section{
      <attribute name="verticalHeaderStretchLastSection">
       <bool>false</bool>
      </attribute>
-     <row>
-      <property name="text">
-       <string>bruh</string>
-      </property>
-     </row>
      <column>
       <property name="text">
        <string>№</string>
@@ -316,26 +311,6 @@ QHeaderView::section{
        </brush>
       </property>
      </column>
-     <item row="0" column="0">
-      <property name="text">
-       <string>1</string>
-      </property>
-     </item>
-     <item row="0" column="1">
-      <property name="text">
-       <string>пельмен</string>
-      </property>
-     </item>
-     <item row="0" column="2">
-      <property name="text">
-       <string>1</string>
-      </property>
-     </item>
-     <item row="0" column="3">
-      <property name="text">
-       <string>350₽</string>
-      </property>
-     </item>
     </widget>
     <widget class="QLabel" name="label_3">
      <property name="geometry">
@@ -363,7 +338,7 @@ QHeaderView::section{
 }</string>
      </property>
      <property name="text">
-      <string> № Наименование  кол-во сумма</string>
+      <string> № Наименование  к-во   сумма</string>
      </property>
     </widget>
     <widget class="Line" name="line">

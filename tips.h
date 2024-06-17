@@ -19,6 +19,9 @@ public:
 
 private:
     Ui::Tips *ui;
+
+signals:
+    void tipsUpdate();
 };
 
 #endif // TIPS_H
